@@ -1,0 +1,14 @@
+1. Approach:
+- I structured the form using HTML `<form>` elements with appropriate input fields, labels, and placeholders. I added the `required` attribute for validation.
+- For the table, I used `<table>`, `<thead>`, and `<tbody>` elements to organize the data. Each user entry is in a separate `<tr>` with `<td>` for columns.
+- Added an `<hr>` to separate the form and table visually.
+- Styled the form and table minimally for clarity.
+
+2. Challenges:
+- Ensuring proper alignment of form inputs and labels was tricky initially. I resolved it by using `<br>` tags for spacing.
+- Understanding form validation required experimentation with the `required` attribute.
+
+3. Learning:
+- Gained a better understanding of how forms work, including different input types and their attributes.
+- Learned how to structure and style tables effectively.
+- Improved debugging skills by resolving minor validation issues.

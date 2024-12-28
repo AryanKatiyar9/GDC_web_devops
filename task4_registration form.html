@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #03c93e;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        form, table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #1f34ec;
+            text-align: left;
+        }
+        th, td {
+            padding: 8px;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Registration Form Section -->
+        <h1>Registration Form</h1>
+        <form action="#" method="post">
+            <!-- Full Name Field -->
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required><br><br>
+
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <!-- Password Field -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter a password" required><br><br>
+
+            <!-- Gender Radio Buttons -->
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label><br><br>
+
+            <!-- Hobbies Checkboxes -->
+            <label>Hobbies:</label><br>
+            <input type="checkbox" id="hobby1" name="hobbies" value="Reading">
+            <label for="hobby1">Reading</label><br>
+            <input type="checkbox" id="hobby2" name="hobbies" value="Sports">
+            <label for="hobby2">Sports</label><br>
+            <input type="checkbox" id="hobby3" name="hobbies" value="Music">
+            <label for="hobby3">Music</label><br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr>
+
+        <!-- User Data Table Section -->
+        <h2>User Data Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Hobbies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>Male</td>
+                    <td>Reading, Sports</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>jane@example.com</td>
+                    <td>Female</td>
+                    <td>Music</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Alex Johnson</td>
+                    <td>alex@example.com</td>
+                    <td>Other</td>
+                    <td>Reading, Music</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        © 2024 Aryan Katiyar
+    </footer>
+</body>
+</html>
