@@ -1,0 +1,291 @@
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="description" content="A modern, animated blog homepage.">  
+  <title>Animated Blog Homepage</title>  
+  <style>  
+    /* Import Google Fonts */  
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    .satisfy-regular {
+        font-family: "Satisfy", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* CSS Variables */  
+    :root {  
+      --primary-color: #1e90ff;  
+      --secondary-color: #333;  
+      --background-color: #f9f9f9;  
+      --text-color: #444;  
+      --font-family: 'Poppins', sans-serif;  
+    }  
+
+    * {  
+      margin: 0;  
+      padding: 0;  
+      box-sizing: border-box;  
+    }  
+
+    body {  
+      font-family: var(--font-family);  
+      background-color: var(--background-color);  
+      color: var(--text-color);  
+      scroll-behavior: smooth;  
+    }  
+
+    /* Reusable Classes */  
+    .container {  
+      max-width: 1200px;  
+      margin: 0 auto;  
+      padding: 0 1rem;  
+    }  
+
+    .btn {  
+      display: inline-block;  
+      padding: 0.6rem 1.2rem;  
+      background: var(--primary-color);  
+      color: white;  
+      text-decoration: none;  
+      border-radius: 5px;  
+      transition: transform 0.3s ease, background 0.3s ease;  
+    }  
+
+    .btn:hover {  
+      background: #0056b3;  
+      transform: translateY(-3px);  
+    }  
+
+    /* Header */  
+    .header {  
+      position: sticky;  
+      top: 0;  
+      background: white;  
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+      z-index: 1000;  
+      padding: 1rem 0;  
+    }  
+
+    .header .container {  
+      display: flex;  
+      justify-content: space-between;  
+      align-items: center;  
+    }  
+
+    .header .nav ul {  
+      display: flex;  
+      list-style: none;  
+      gap: 1rem;  
+    }  
+
+    .header .nav a {  
+      text-decoration: none;  
+      color: var(--text-color);  
+      font-weight: 600;  
+    }  
+
+    .header .nav a:hover {  
+      color: var(--primary-color);  
+    }  
+
+    /* Hero Section */  
+    .hero {  
+      height: 100vh;  
+      background: linear-gradient(to right, #1e90ff, #00aaff);  
+      color: white;  
+      display: flex;  
+      align-items: center;  
+      justify-content: center;  
+      text-align: center;  
+      padding: 2rem;  
+    }  
+
+    .hero h1 {  
+      font-size: 3rem;  
+      margin-bottom: 1rem;  
+    }  
+
+    .hero p {  
+      margin-bottom: 1.5rem;  
+    }  
+
+    /* Fade-in Animation */  
+    .fade-in {  
+      animation: fadeIn 1s ease-in;  
+    }  
+
+    .fade-in-delay {  
+      animation: fadeIn 1.5s ease-in;  
+    }  
+
+    /* Blogs Section */  
+    .blogs {  
+      padding: 2rem 0;  
+      background: var(--background-color);  
+    }  
+
+    .section-title {  
+      text-align: center;  
+      font-size: 2rem;  
+      margin-bottom: 2rem;  
+      position: relative;  
+    }  
+
+    .section-title::after {  
+      content: '';  
+      display: block;  
+      width: 50px;  
+      height: 4px;  
+      background: var(--primary-color);  
+      margin: 0.5rem auto 0;  
+    }  
+
+    /* Blog Cards */  
+    .blog-container {  
+      display: flex;  
+      gap: 1.5rem;  
+      flex-wrap: wrap;  
+      justify-content: center;  
+    }  
+
+    .blog-card {  
+      background: white;  
+      border-radius: 5px;  
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+      overflow: hidden;  
+      width: 300px;  
+      text-align: center;  
+      transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    }  
+
+    .blog-card img {  
+      width: 100%;  
+      height: 200px;  
+      object-fit: cover;  
+    }  
+
+    .blog-card:hover {  
+      transform: translateY(-5px);  
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  
+    }  
+
+    .blog-card h3 {  
+      font-size: 1.2rem;  
+      margin: 1rem 0;  
+    }  
+
+    .blog-card p {  
+      padding: 0 1rem;  
+      margin-bottom: 1rem;  
+    }  
+
+    /* Footer */  
+    .footer {  
+      text-align: center;  
+      padding: 1rem;  
+      background: var(--secondary-color);  
+      color: white;  
+    }  
+
+    /* Keyframes */  
+    @keyframes fadeIn {  
+      from {  
+        opacity: 0;  
+        transform: translateY(20px);  
+      }  
+      to {  
+        opacity: 1;  
+        transform: translateY(0);  
+      }  
+    }  
+
+    @keyframes scaleUp {  
+      from {  
+        transform: scale(1);  
+      }  
+      to {  
+        transform: scale(1.1);  
+      }  
+    }  
+  </style>  
+</head>  
+<body>  
+  <!-- Header -->  
+  <header class="header">  
+    <div class="container">  
+      <div class="logo">Aryan's_ProBlog</div>
+      <nav class="nav">  
+        <ul>  
+          <li><a href="#hero">Home</a></li>  
+          <li><a href="#blogs">Blogs</a></li>  
+          <li><a href="#footer">Contact</a></li>  
+        </ul>  
+      </nav>  
+    </div>  
+  </header>  
+
+  <!-- Hero Section -->  
+  <section id="hero" class="hero">  
+    <div class="hero-content">  
+      <h1 class="fade-in">Welcome to ProBlog</h1>  
+      <p class="fade-in-delay">Stay inspired with the latest insights in technology and design.</p>  
+      <a href="#blogs" class="btn">Explore Blogs</a>  
+    </div>  
+  </section>  
+
+  <!-- Blog Cards Section -->  
+  <section id="blogs" class="blogs">  
+    <h2 class="section-title">Latest Blogs</h2>  
+    <div class="blog-container">  
+      <article class="blog-card">  
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=lQMkUit8&id=91069A77E52BEB29F705DDC46E054548F3934381&thid=OIP.lQMkUit8LlZoiW6JWt0SZQAAAA&mediaurl=https%3a%2f%2fwww.thedineandwine.com%2fblog-data%2fuploads%2f2019%2f10%2fWine.png&exph=66&expw=161&q=Blog+Banner&simid=608031357040671723&FORM=IRPRST&ck=CD943A7D5919ED2A8766F6B2985B7894&selectedIndex=10&itb=1&qft=%2bfilterui%3alicense-L1%2bfilterui%3aimagesize-small" alt="Blog 1">  
+        <div class="content">  
+          <h3>Blog Title 1</h3>  
+          <p>Discover tech trends shaping the future.</p>  
+          <a href="#" class="btn">Read More</a>  
+        </div>  
+      </article>  
+      <article class="blog-card">  
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=8P4swNTs&id=24338E2E3E547DE27F94F90DB71D7D7A2EA39FB8&thid=OIP.8P4swNTsTBxlCsIK-p6LUwAAAA&mediaurl=https%3a%2f%2fas1.ftcdn.net%2fjpg%2f02%2f86%2f19%2f80%2f220_F_286198079_6OPGxn5fk2eOdHALgDF5fSL0RUbe8fQ5.jpg&exph=220&expw=220&q=Free+FSL+Embroidery+Designs&simid=608005634522748522&FORM=IRPRST&ck=731E95ECB58952FB9CFFA6461F5325E5&selectedIndex=0&itb=0&qft=+filterui%3alicense-L1+filterui%3aimagesize-medium" alt="Blog 2">  
+        <div class="content">  
+          <h3>Blog Title 2</h3>  
+          <p>Learn the secrets of effective design strategies.</p>  
+          <a href="#" class="btn">Read More</a>  
+        </div>  
+      </article>  
+      <article class="blog-card">  
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=NWzZtMJ7&id=9635FAAB33DB4FD26AA82285FAF37C5920D07256&thid=OIP.NWzZtMJ7_Akb5LHSLZY8AgAAAA&mediaurl=https%3a%2f%2fcdn-images-1.medium.com%2fmax%2f1600%2f1*4tSFlH3lC2pG24DXftvInQ.png&exph=362&expw=356&q=How+Artificial+Intelligence+Is+Transforming+the+World&simid=608010384723827755&FORM=IRPRST&ck=9163D10EDF36CB91D6FF05186287C87F&selectedIndex=0&itb=0&qft=%2bfilterui%3alicense-L1%2bfilterui%3aimagesize-medium" alt="Blog 3">  
+        <div class="content">  
+          <h3>Blog Title 3</h3>  
+          <p>How AI is transforming industries worldwide.</p>  
+          <a href="#" class="btn">Read More</a>  
+        </div>  
+      </article>  
+      <!-- Additional Blog Cards -->  
+      <article class="blog-card">  
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=O8FFDADY&id=CDD7E415D2A6E884F7233295CAF26A4D6C3ACD72&thid=OIP.O8FFDADY69X6LHbqXSkylwAAAA&mediaurl=https%3a%2f%2fcdn-images-1.medium.com%2fmax%2f1200%2f1*0SV_KZlkV7hmmubxELARMg.jpeg&exph=375&expw=250&q=impact+of+modern++world&simid=608048919198242651&FORM=IRPRST&ck=5694AF87B35CDD915FD15D19A4EFE166&selectedIndex=10&itb=0&qft=%2bfilterui%3alicense-L1%2bfilterui%3aimagesize-medium" alt="Blog 4">  
+        <div class="content">  
+          <h3>Blog Title 4</h3>  
+          <p>Exploring the impact of renewable energy.</p>  
+          <a href="#" class="btn">Read More</a>  
+        </div>  
+      </article>  
+      <article class="blog-card">  
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=k27%2fnt%2fR&id=889DA9CF4343793D06C9BEBF9B6A3F167EA039CA&thid=OIP.k27_nt_Rt47KeFhIY32UpgAAAA&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.936eff9edfd1b78eca785848637d94a6%3frik%3dyjmgfhY%252fapu%252fvg%26riu%3dhttp%253a%252f%252fwww.publicdomainpictures.net%252fpictures%252f140000%252ft2%252fcarry-the-world-1446631979zBZ.jpg%26ehk%3dl7YNxOBTv%252bqaXu4W8JbJEwnkA5%252bCr1aLr5%252bHjwziOIE%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=150&expw=198&q=post+dynamic+world&simid=608016590986045600&FORM=IRPRST&ck=EBBDB5D6CB59DDDFF78B599D72608C53&selectedIndex=0&itb=0&qft=+filterui%3alicense-L1+filterui%3aimagesize-small" alt="Blog 5">  
+        <div class="content">  
+          <h3>Blog Title 5</h3>  
+          <p>The future of remote work in a post-pandemic world.</p>  
+          <a href="#" class="btn">Read More</a>  
+        </div>  
+      </article>  
+    </div>  
+  </section>  
+
+  <!-- Footer -->  
+  <footer id="footer" class="footer">  
+    <p>© 2025 ProBlog. All rights reserved.</p>  
+  </footer>  
+
+</body>  
+</html>
