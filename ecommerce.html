@@ -1,0 +1,109 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>E-commerce Product Page</title>  
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">  
+</head>  
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">  
+
+    <div class="container mx-auto p-4 flex">  
+        <!-- Sidebar -->  
+        <aside class="w-1/4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">  
+            <h2 class="text-lg font-bold mb-4">Filters</h2>  
+            <div>  
+                <h3 class="font-semibold">Categories</h3>  
+                <ul class="list-disc ml-4">  
+                    <li><a href="#" class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-300">Electronics</a></li>  
+                    <li><a href="#" class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-300">Books</a></li>  
+                    <li><a href="#" class="text-blue-500 hover:text-blue-700 dark:hover:text-blue-300">Clothing</a></li>  
+                </ul>  
+            </div>  
+            <div class="mt-4">  
+                <h3 class="font-semibold">Price Range</h3>  
+                <input type="range" min="0" max="1000" class="w-full">  
+            </div>  
+        </aside>  
+
+        <!-- Product Grid -->  
+        <main class="flex-1 ml-4">  
+            <h1 class="text-2xl font-bold mb-6">Products</h1>  
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4">  
+                <!-- Product Card -->  
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">  
+                    <img src="https://via.placeholder.com/150" alt="Product Image" class="w-full h-32 object-cover mb-2 rounded">  
+                    <h2 class="font-semibold">Product Name</h2>  
+                    <p class="text-gray-600 dark:text-gray-300">$19.99</p>  
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Add to Cart</button>  
+                </div>  
+                <!-- Repeat Product Card 7 times -->  
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">  
+                    <img src="https://via.placeholder.com/150" alt="Product Image" class="w-full h-32 object-cover mb-2 rounded">  
+                    <h2 class="font-semibold">Product Name</h2>  
+                    <p class="text-gray-600 dark:text-gray-300">$29.99</p>  
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Add to Cart</button>  
+                </div>  
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">  
+                    <img src="https://via.placeholder.com/150" alt="Product Image" class="w-full h-32 object-cover mb-2 rounded">  
+                    <h2 class="font-semibold">Product Name</h2>  
+                    <p class="text-gray-600 dark:text-gray-300">$39.99</p>  
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Add to Cart</button>  
+                </div>  
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">  
+                    <img src="https://via.placeholder.com/150" alt="Product Image" class="w-full h-32 object-cover mb-2 rounded">  
+                    <h2 class="font-semibold">Product Name</h2>  
+                    <p class="text-gray-600 dark:text-gray-300">$49.99</p>  
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Add to Cart</button>  
+                </div>  
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">  
+                    <img src="https://via.placeholder.com/150" alt="Product Image" class="w-full h-32 object-cover mb-2 rounded">  
+                    <h2 class="font-semibold">Product Name</h2>  
+                    <p class="text-gray-600 dark:text-gray-300">$59.99</p>  
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Add to Cart</button>  
+                </div>  
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">  
+                    <img src="https://via.placeholder.com/150" alt="Product Image" class="w-full h-32 object-cover mb-2 rounded">  
+                    <h2 class="font-semibold">Product Name</h2>  
+                    <p class="text-gray-600 dark:text-gray-300">$69.99</p>  
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Add to Cart</button>  
+                </div>  
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">  
+                    <img src="https://via.placeholder.com/150" alt="Product Image" class="w-full h-32 object-cover mb-2 rounded">  
+                    <h2 class="font-semibold">Product Name</h2>  
+                    <p class="text-gray-600 dark:text-gray-300">$79.99</p>  
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Add to Cart</button>  
+                </div>  
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">  
+                    <img src="https://via.placeholder.com/150" alt="Product Image" class="w-full h-32 object-cover mb-2 rounded">  
+                    <h2 class="font-semibold">Product Name</h2>  
+                    <p class="text-gray-600 dark:text-gray-300">$89.99</p>  
+                    <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Add to Cart</button>  
+                </div>  
+            </div>  
+        </main>  
+    </div>  
+
+    <script>  
+        // Enable dark mode toggle (optional)  
+        const toggleDarkMode = () => {  
+            const currentTheme = localStorage.getItem('theme');  
+            if (currentTheme === 'dark') {  
+                document.body.classList.remove('dark');  
+                localStorage.setItem('theme', 'light');  
+            } else {  
+                document.body.classList.add('dark');  
+                localStorage.setItem('theme', 'dark');  
+            }  
+        };  
+
+        document.addEventListener('DOMContentLoaded', () => {  
+            const themeToggleButton = document.createElement('button');  
+            themeToggleButton.innerText = 'Toggle Dark Mode';  
+            themeToggleButton.className = 'absolute top-4 right-4 bg-gray-800 text-white p-2 rounded';  
+            themeToggleButton.onclick = toggleDarkMode;  
+            document.body.appendChild(themeToggleButton);  
+        });  
+    </script>  
+</body>  
+</html>

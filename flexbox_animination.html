@@ -1,0 +1,178 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Services Page</title>  
+    <style>* {  
+        box-sizing: border-box;  
+        margin: 0;  
+        padding: 0;  
+    }  
+    
+    body {  
+        font-family: Arial, sans-serif;  
+    }  
+    
+    .header {  
+        position: sticky;  
+        top: 0;  
+        background: #333;  
+        color: #fff;  
+        transition: height 0.3s;  
+        z-index: 1000;  
+    }  
+    
+    .navbar {  
+        display: flex;  
+        justify-content: space-between;  
+        align-items: center;  
+        padding: 15px;  
+    }  
+    
+    .navbar h1 {  
+        font-size: 24px;  
+    }  
+    
+    .navbar ul {  
+        list-style: none;  
+        display: flex;  
+        gap: 20px;  
+    }  
+    
+    .navbar a {  
+        color: #fff;  
+        text-decoration: none;  
+    }  
+    
+    .main-content {  
+        padding: 20px;  
+    }  
+    
+    .services {  
+        display: flex;  
+        flex-wrap: wrap;  
+        justify-content: space-between;  
+        gap: 20px;  
+    }  
+    
+    .service-card {  
+        flex: 1 1 calc(25% - 20px);  
+        background: #f1f1f1;  
+        border-radius: 8px;  
+        padding: 20px;  
+        text-align: center;  
+        animation: fadeIn 0.5s forwards;  
+    }  
+    
+    .icon {  
+        font-size: 40px;  
+        margin-bottom: 10px;  
+    }  
+    
+    @keyframes fadeIn {  
+        from {  
+            opacity: 0;  
+            transform: translateY(20px);  
+        }  
+        to {  
+            opacity: 1;  
+            transform: translateY(0);  
+        }  
+    }  
+    
+    .cta-banner {  
+        background-color: #007BFF;  
+        color: #fff;  
+        text-align: center;  
+        padding: 20px;  
+    }  
+    
+    .cta-button {  
+        background-color: #fff;  
+        color: #007BFF;  
+        padding: 10px 20px;  
+        border: none;  
+        border-radius: 5px;  
+        cursor: pointer;  
+        transition: background-color 0.3s, color 0.3s;  
+    }  
+    
+    .cta-button:hover {  
+        background-color: #007BFF;  
+        color: #fff;  
+    }  
+    
+    /* Responsive Styles */  
+    @media (max-width: 768px) {  
+        .service-card {  
+            flex: 1 1 100%;  
+        }  
+    
+        .navbar {  
+            flex-direction: column;  
+            align-items: flex-start;  
+        }  
+    
+        .navbar h1 {  
+            margin-bottom: 10px;  
+        }  
+    }
+    </style> 
+</head>  
+<body>  
+    <header class="header">  
+        <nav class="navbar">  
+            <h1>Company Name</h1>  
+            <ul>  
+                <li><a href="#">Home</a></li>  
+                <li><a href="#">Services</a></li>  
+                <li><a href="#">About</a></li>  
+                <li><a href="#">Contact</a></li>  
+            </ul>  
+        </nav>  
+    </header>  
+
+    <main class="main-content">  
+        <div class="services">  
+            <div class="service-card">  
+                <div class="icon">🌐</div>  
+                <h2>Web Development</h2>  
+                <p>Building responsive and efficient web solutions.</p>  
+            </div>  
+            <div class="service-card">  
+                <div class="icon">📱</div>  
+                <h2>Mobile Development</h2>  
+                <p>Creating engaging mobile applications for all platforms.</p>  
+            </div>  
+            <div class="service-card">  
+                <div class="icon">📈</div>  
+                <h2>Digital Marketing</h2>  
+                <p>Boost your business with effective digital marketing strategies.</p>  
+            </div>  
+            <div class="service-card">  
+                <div class="icon">🔒</div>  
+                <h2>Cybersecurity</h2>  
+                <p>Your data protection is our priority.</p>  
+            </div>  
+        </div>  
+    </main>  
+
+    <section class="cta-banner">  
+        <h2>Ready to Get Started?</h2>  
+        <button class="cta-button">Contact Us</button>  
+    </section>  
+
+    <script>document.addEventListener('scroll', function() {  
+        const header = document.querySelector('.header');  
+        const scrollY = window.scrollY;  
+    
+        if (scrollY > 50) {  
+            header.style.height = '50px';  
+        } else {  
+            header.style.height = '80px';  
+        }  
+    });
+    </script>  
+</body>  
+</html>
